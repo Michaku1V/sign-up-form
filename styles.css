@@ -1,0 +1,167 @@
+:root {
+    --box-shadow-l:  0 3px 7px rgb(0 0 0 / 0.1);
+    --box-shadow-m:  0 3px 10px rgb(0 0 0 / 0.2);
+    --input-background-color: #E5E7EB
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: Norse;
+    src: url(fonts/Norse-Bold.otf);
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    display: flex;
+    background: url(images/kelly-sikkema-SDa3foPsj5o-unsplash.jpg) center/cover no-repeat; 
+    font-size: 2rem;
+}
+
+/* SIGN UP SECTION */
+
+.sign-up-section {
+    width: 61.8%;
+    height: 100vh;  
+}
+
+.sign-up-section h1 {
+    margin-bottom: 4rem;
+}
+
+.sign-up-section > div {
+   height: 70%;
+   margin-left: 43%;
+   margin-top: 20%;
+}
+
+form > div {
+    box-shadow: var(--box-shadow-m);
+    font-size: 1rem;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+}
+
+form legend {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+form > div > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.input-box {
+    display: flex;
+    flex-direction: column;
+    min-width: 45%;
+    /* width: clamp(45%, auto, 100%); */
+}
+
+.input-box > label {
+    font-size: 1em;
+    letter-spacing: .15em;
+}
+
+.input-box > input {
+    padding: .5rem 0.25rem;
+    outline: none;
+    background-color: var(--input-background-color);
+    border: 1px solid var(--input-background-color);
+    border-radius: 5px;
+}
+
+.input-box > input:focus {
+    outline: none;
+    border: 1px solid rgb(33, 177, 224);
+    box-shadow: var(--box-shadow-l);
+}
+
+/* .input-box >input[type='password'] {
+    border: 1px solid red;
+} */
+
+.pass.invalid::after,
+legend.invalid::after {
+    content: attr(data-invalid) ;
+    display: block;
+    font-size: 1rem;
+    color: red;
+}
+
+button[type='submit'] {
+    padding: 1rem 2.5rem;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    font-family: inherit;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-style: none;
+    box-shadow: var(--box-shadow-m);
+    margin-bottom: 3rem;
+}
+
+button[type='submit']:is(:hover, :focus) {
+    background-color: rgba(0, 0, 0, 1);
+    cursor: pointer;
+    box-shadow: var(--box-shadow-l)
+}
+
+.log-in {
+    font-size: smaller;
+}
+.log-in>a {
+    text-decoration: none;
+    color: black;
+    font-size: larger;
+}
+.log-in>a:hover {
+
+    color: rgba(0, 0, 0, 0.7);
+}
+
+/* LOGO SECTION */
+
+.logo-section {
+    width: 38.2%;
+}
+
+.logo-section > div {
+    margin-top: calc(20vh + 5rem);
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.logo-section>div img {
+    height: 13rem;
+    width: auto;
+}
+
+.logo-section>div p {
+    font-family: Norse;
+    font-size: 7rem;
+    color: white;
+}
+
+.logo-section>div p:hover {
+    color: orange;    
+}
+
+.ref {
+    margin-left: 1rem;
+    font-size: 1.3rem;
+    color: white;
+}
